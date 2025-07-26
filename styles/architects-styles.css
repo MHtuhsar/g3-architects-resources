@@ -13,6 +13,11 @@
     display: flex;
 }
 
+/* Test Color */
+.text-primary {
+    color: #FF900E;
+}
+
 /* dark 02 */
 .text-gray {
     color: #424242;
@@ -22,6 +27,17 @@
 .text-light-gray {
     color: #727272;
 }
+
+.section-title {
+    font-size: 2.8125rem;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 
 /* primary background color */
 .bg-light {
@@ -37,6 +53,15 @@
     border-radius: 8px;
     border: none;
 
+}
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main>section {
+    margin-top: 130px;
 }
 
 /* header styles */
@@ -89,12 +114,98 @@
 
 }
 
+/* team and feature related styles */
+.teams {
+    align-items: center;
+}
+
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.our-features {
+    margin-left: 73px;
+    width: 537px;
+}
+
+
+#Quick-list {
+    font-weight: 500;
+}
+
+
+/* Some Facts Section styles */
+
+.facts-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.some-facts-description {
+    width: 542px;
+}
+
+.fact-card {
+    border: 2px solid #FF900E;
+    border-radius: 8px;
+    width: 240px;
+    height: 240px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fact-number {
+    font-weight: 600;
+    font-size: 2.8125rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.fact-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+
+}
+
+
 /* responsive media query */
 
 @media screen and (max-width:576px) {
 
+    header {
+        max-width: 100%;
+    }
+
     .navbar,
-    .nav-links {
+    .nav-links,
+    .teams {
+        flex-direction: column;
+    }
+
+    .team-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our-features {
+        margin-left: 160px;
+    }
+
+    .features-description {
+        padding-right: 130px;
+    }
+}
+
+/* medium size device */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams {
         flex-direction: column;
     }
 }
